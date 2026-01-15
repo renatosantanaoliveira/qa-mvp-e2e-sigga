@@ -1,0 +1,23 @@
+{
+  "name": "qa-mvp-e2e-sigga",
+  "version": "0.0.2",
+  "scripts": {
+    "test": "cypress run --config video=false",
+    "cy:open": "cypress open",
+    "allure:clear": "rm -r allure-results/ allure-report || true",
+    "allure:report": "allure generate allure-results",
+    "test:reporter": "npx npm-run-all allure:clear test allure:report",
+    "allure:open": "allure open allure-report"
+  },
+  "keywords": [
+    "cypress",
+    "tests",
+    "mocha"
+  ],
+  "devDependencies": {
+    "@faker-js/faker": "^10.2.0",
+    "@shelex/cypress-allure-plugin": "2.23.0",
+    "cypress": "15.9.0",
+    "faker": "^6.6.6"
+  }
+}
